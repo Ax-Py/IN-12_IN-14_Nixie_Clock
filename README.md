@@ -1,3 +1,5 @@
 # IN-12_IN-14_Nixie_Clock
 
-Nixie tube clock that can accept either the horizontal IN-12(B) or the vertical IN-14 tubes. Utilizes a 2x6 NPN BJT matrix to convert 8 I/O to 12. Diodes are used to prevent an overvoltage event from floating outputs. Current is steered by changing the potential of the rows/columns. Goal was to allow the clock to run from a USB2.0 port on a PC (max of 500mA/2.5W).
+Nixie tube clock that can accept any tube that has a maximum current draw of 2.5mA. All digits are driven using a 2mA constant current sink to force digit brightness to be consistent. The RTC can be either the original and more accurate DS3231 or the cheaper MEMS version DS3231M (dual footprint). 
+
+PM and alarm indicators are separate drives to allow for different tube configurations. A small signal relay is used to simulate the ticking sound of a normal mechanical time piece.
